@@ -1,8 +1,4 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
-// const { v4: uuidv4 } = require("uuid");
-
-const User = require("./user");
 const savedPasswordSchema = new mongoose.Schema(
   {
     createdBy: {
@@ -14,7 +10,15 @@ const savedPasswordSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    url: {
+      type: String,
+      required: true,
+    },
     encryptedPassword: {
+      type: String,
+      required: true,
+    },
+    iv: {
       type: String,
       required: true,
     },
