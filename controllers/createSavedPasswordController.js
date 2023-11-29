@@ -29,3 +29,5 @@ async function createSavedPassword(req, res) {
     res.status(500).json({ error });
   }
 }
+
+module.exports = createSavedPassword;
